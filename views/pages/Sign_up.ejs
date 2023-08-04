@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN UP PAGE</title>
+    <!-- <script src="script.js" defer></script> -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="Agromall-logo.jpeg" type="image/jpeg" />
+  </head>
+  <body>
+    <div class="signup-container">
+      <div class="image-form-container">
+        <div class="image-container">
+          <img src="assets/Rectangle 51.png" alt="Signup Image" />
+          <div class="logo-overlay">
+            <img src="assets/agromall logo 1.png" alt="Logo" />
+            <img src="assets/Agromall.png" alt="" />
+          </div>
+        </div>
+        <div class="form-container">
+          <img src="assets/Ellipse 6 (1).png" alt="" />
+          <h2>Create an Account</h2>
+          <form action="/signup" method="POST">
+            <input type="text" placeholder="Name" name="name" required />
+            <input type="email" placeholder="Email" name="email" required />
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              required
+            />
+            <!-- <input
+              type="password"
+              placeholder="Confirm Password"
+              name="confirm_password"
+            /> -->
+            <label class="checkbox-label">
+              <input type="checkbox" required />
+              I agree to the terms and conditions
+            </label>
+            <button type="submit">Sign Up</button>
+          </form>
+
+          <div class="login-link">
+            <p>Already have an account? <a href="/login">Log In</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
