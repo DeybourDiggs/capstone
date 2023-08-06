@@ -19,7 +19,6 @@ const login_post = async (req, res) => {
         return res.send('Invalid Credentials')
       }
       const token = await jwt.sign({email: user.email}, process.env.JWT_SECRET, {expiresIn: process.env.JWT_EXPIRES})
-      console.log(token)
     }
     return res.redirect('/')
   } catch (error) {
@@ -41,12 +40,13 @@ const signup_post = async (req, res) => {
       password: hashedPassword,
       email: req.body.email,
     });
-    console.log(user);
     return res.redirect("/login");
   
   } catch (err) {
     res.status(500).json(err);
   }
 };
+
+
 
 module.exports = { home, signup, login, signup_post, login_post };

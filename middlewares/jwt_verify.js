@@ -14,7 +14,7 @@ const jwt_verify = async (req, res, next) => {
   }
 
   try {
-    let user = await jwt.verify(token, "hdhdgshsgtedgsytwt");
+    let user = await jwt.verify(token, process.env.JWT_SECRET);
     req.user = user.email;
     next();
   } catch (error) {
