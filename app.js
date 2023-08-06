@@ -11,7 +11,7 @@ const session = require("express-session");
 const initializePassport = require("./passport-config");
 const users = require("./models/users");
 const app = express();
-PORT = 5000;
+PORT = process.env.PORT || 5000;
 
 initializePassport(passport, (email) => {
   return users.find((user) => user.email === email);
