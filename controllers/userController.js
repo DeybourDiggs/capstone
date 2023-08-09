@@ -3,7 +3,7 @@ const User = require("../models/users");
 const jwt = require('jsonwebtoken');
 
 const home = async (req, res) => {
-  res.render("pages/Homepage", { username: "Adara" });
+  res.render("pages/Homepage", );
 };
 const login = async (req, res) => {
   res.render("pages/Login");
